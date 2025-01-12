@@ -1,6 +1,8 @@
 // Auto-focus first field on page load
 window.onload = () => {
-    document.getElementById('a').focus();
+    const firstInput = document.getElementById('a');
+    firstInput.focus();
+    firstInput.click();  // This triggers the keyboard on iOS
 };
 
 document.getElementById('calculate').addEventListener('click', () => {
