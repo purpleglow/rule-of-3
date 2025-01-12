@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #ffffff;
+    --primary-color: #808080;
     --background: #121212;
     --surface: #1E1E1E;
     --on-surface: #FFFFFF;
-    --error: #CF6679;
+    --error: #ff4444;
 }
 
 * {
@@ -162,4 +162,60 @@ input[type=number] {
 
 .error-message.show {
     opacity: 1;
+}
+
+.right-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.toggle input {
+    display: none;
+}
+
+.toggle-track {
+    position: relative;
+    width: 40px;
+    height: 24px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 34px;
+    transition: 0.3s;
+}
+
+.toggle-track::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    transition: 0.3s;
+}
+
+.toggle input:checked + .toggle-track {
+    background: #4CAF50;
+}
+
+.toggle input:checked + .toggle-track::after {
+    transform: translateX(16px);
+    background: white;
+}
+
+.toggle-label {
+    user-select: none;
 } 
