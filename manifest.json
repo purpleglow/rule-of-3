@@ -2,10 +2,11 @@
     "name": "Rule of Three Calculator",
     "short_name": "Rule of 3",
     "description": "Simple rule of three calculator",
-    "start_url": "/",
+    "start_url": "/rule-of-3/",
     "display": "standalone",
     "background_color": "#121212",
-    "theme_color": "#BB86FC",
+    "theme_color": "#121212",
+    "orientation": "portrait",
     "icons": [
         {
             "src": "icons/icon-192.png",
